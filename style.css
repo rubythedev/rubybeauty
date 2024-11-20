@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@400..900&family=Petit+Formal+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Styles */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300; /* Light for body text */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    line-height: 1.6;
+    animation: fadeIn 1s forwards;
+}
+
+/* Heading 1 Style (Nav and Section Titles) */
+h1 {
+    font-family: "Cinzel", serif;
+    font-weight: 700; /* Bold */
+    font-size: 2.5em; /* Adjust size as needed */
+    text-transform: uppercase; /* Optional for style */
+    color: #000;
+    margin: 0;
+}
+
+/* Heading 2 - Raleway Medium */
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; /* Medium weight */
+    font-size: 3.5em; /* Adjust size as needed */
+    margin-bottom: 15px;
+    text-align: center;
+    color: #bc9946;
+}
+
+/* Paragraph/Text Style */
+p, textarea, input, button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300; /* Light */
+    font-size: 1em;
+    color: #666;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header */
+header {
+    background-color: #ffffff; /* Set the header background color to #cdb8f8 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 0.2s; /* Fade-in with delay */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    width: 55px;  /* Small logo */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+/* Apply Raleway font to navigation and headers */
+nav a, .raleway-header {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Bold weight for navigation links */
+}
+
+/* Gallery Section */
+#large-logo {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards .4s;
+}
+/* Large Logo Under Nav */
+.large-logo-container {
+    text-align: center;
+    margin-top: 0; /* Space between navbar and logo */
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 0.2s; /* Fade-in with delay */
+}
+
+.large-logo {
+    width: 800px;
+    height: 400px; /* Set a fixed height if needed */
+    clip-path: inset(20% 0 0 0); /* Crop 20% from the top */
+}
+
+/* Services Section */
+#gallery {
+    padding: 50px 20px;
+    background-color: #000000; /* Set the services section background color to #cdb8f8 */
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1s; /* Fade-in with delay */
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Full width container */
+    height: 400px; /* Set to match your image height */
+    overflow: hidden; /* Hide overflowed images */
+}
+
+.gallery-image {
+    width: 400px; /* Image width */
+    height: 400px; /* Image height */
+    object-fit: cover; /* Ensure image aspect ratio is maintained */
+    transition: all 0.5s ease-in-out; /* Smooth transition for shifting */
+    position: absolute; /* Position images absolutely within the container */
+}
+
+.left {
+    left: 0; /* Position the left image to start at the left edge of the container */
+    opacity: 0.7; /* Make the left image slightly faded */
+    transform: scale(0.9); /* Slightly smaller */
+}
+
+.center {
+    left: 50%; /* Position the center image in the middle */
+    transform: translateX(-50%) scale(1); /* Center the image by shifting it back by half its width */
+    opacity: 1; /* Full opacity for the middle image */
+}
+
+.right {
+    right: 0; /* Position the right image to start at the right edge of the container */
+    opacity: 0.7; /* Make the right image slightly faded */
+    transform: scale(0.9); /* Slightly smaller */
+}
+
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    background-color: #ffffff; /* Set the about section background color to #cdb8f8 */
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 0.8s; /* Fade-in with delay */
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    background-color: #ffffff; /* Set the services section background color to #cdb8f8 */
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1s; /* Fade-in with delay */
+}
+
+/* Service Container */
+.service {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-10px); /* Subtle hover effect */
+}
+
+/* Service Image Gallery */
+.service-gallery {
+    flex: 1;
+    margin-right: 50px;
+    position: relative;
+    width: 500px;  /* Fixed width */
+    height: 500px; /* Fixed height */
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide any overflow */
+    display: flex; /* Use flex to center the image */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+}
+
+.service-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Service Details */
+.service-details {
+    flex: 2;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.service-details h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-details p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-gallery {
+        max-width: 90%; /* Image will fill the width on smaller screens */
+    }
+}
+
+/* Contact Section */
+#contact {
+    background-color: #ffffff; /* Set the contact section background color to #cdb8f8 */
+    padding: 40px 20px; /* Increase padding for better spacing */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1.2s; /* Fade-in with delay */
+}
+
+/* Header Style */
+#contact h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center form */
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 5px;
+    transition: border-color 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #6c5ce7; /* Focus border color */
+    outline: none; /* Remove default focus outline */
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #6c5ce7; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#contact-form button:hover {
+    background-color: #5a4dcf; /* Button hover color */
+}
+
+/* Response Message */
+#response-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.petit-formal-script-regular {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* Apply all caps to headers */
+.raleway-header {
+    text-transform: uppercase; /* Make text all caps */
+}
+
+/* Unique Class Names for Headers */
+.raleway-header-about {
+    font-weight: 900; /* Bold weight for About header */
+}
+
+.raleway-header-gallery {
+    font-weight: 800; /* Bold weight for Gallery header */
+}
+
+.raleway-header-services {
+    font-weight: 700; /* Bold weight for Services header */
+}
+
+.raleway-header-contact {
+    font-weight: 600; /* Medium weight for Contact header */
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@400..900&family=Petit+Formal+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="images/logo/transparent.svg" alt="Logo" class="logo" loading="lazy">
+            <nav>
+                <ul>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Large logo under nav -->
+    <section id="large-logo" class="large-logo-container">
+        <img src="images/logo/letter_logo.svg" alt="Letter Logo" class="large-logo" loading="lazy">
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="photo_gallery">
+        <h2>GALLERY</h2>
+        <div class="gallery-container">
+            <!-- Images will be dynamically added here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>ABOUT</h2>
+        <p>Welcome to our website! We offer a range of beauty services designed to make you look and feel your best. Whether you're preparing for a special event or just want a refresh, our team is here to help you with personalized service.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>SERVICES & PRICING</h2>
+
+        <div class="service" data-folder="soft_glam">
+            <div class="service-gallery">
+                <!-- Image will be dynamically added here via JavaScript -->
+            </div>
+            <div class="service-details">
+                <h3>Soft Glam</h3>
+                <p>Perfect for a natural but polished look.</p>
+                <p class="price">$120</p>
+            </div>
+        </div>
+
+        <div class="service" data-folder="full_glam">
+            <div class="service-gallery">
+                <!-- Image will be dynamically added here via JavaScript -->
+            </div>
+            <div class="service-details">
+                <h3>Full Glam</h3>
+                <p>For a bold, dramatic look that lasts all day.</p>
+                <p class="price">$150</p>
+            </div>
+        </div>
+
+        <div class="service" data-folder="bridal_makeup">
+            <div class="service-gallery">
+                <!-- Image will be dynamically added here via JavaScript -->
+            </div>
+            <div class="service-details">
+                <h3>Bridal Makeup</h3>
+                <p>Long-lasting makeup for your special day.</p>
+                <p class="price">$175</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Your Name" required />
+            <input type="email" name="user_email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="response-message"></p>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
